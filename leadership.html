@@ -69,6 +69,29 @@
         .back-link:hover {
             color: #2563eb;
         }
+
+        /* Footer Styling */
+        .custom-footer {
+            background-color: #0f172a;
+            /* Deep blue to match your buttons */
+            color: #f8fafc;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+            margin-top: 60px;
+            border-radius: 8px;
+            /* Remove this line if you want sharp square corners */
+        }
+
+        .custom-footer a {
+            color: #93c5fd;
+            /* Light blue link color so it shows up on dark background */
+        }
+
+        .custom-footer a:hover {
+            color: #eff6ff;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -83,57 +106,102 @@
         </div>
     </nav>
 
-    <div class="container mt-4 mb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
+    <!-- Detailed Content in Two-Column Grid -->
+    <div class="container mt-5 mb-5">
 
+        <!-- Centered Header Row -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
                 <h1 class="mb-3">Leadership & Social Activism</h1>
-                <p class="lead mb-5">A deeper look into my organizational roles, event management experience, and
-                    community involvement.</p>
+                <p class="lead">A deeper look into my organizational roles, event management experience, and community
+                    involvement.</p>
+            </div>
+        </div>
 
-                <div class="content-box">
+        <!-- Two-Column Dynamic Grid -->
+        <div class="row g-4">
+
+            <!-- Experience 1 -->
+            <div class="col-lg-6 col-md-12">
+                <div class="content-box h-100 mb-0 d-flex flex-column">
                     <div class="role-title">President</div>
                     <div class="org-meta">IEM Robotics and CAD Club</div>
-                    <ul>
+                    <ul class="flex-grow-1">
                         <li>Served as the Lead Organizer for the <strong>Technomize 1.0 National Tech Fest</strong>.
                         </li>
                         <li>Coordinated logistics, managed cross-functional student teams, and oversaw the successful
                             execution of multiple technical competitions.</li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="content-box">
+            <!-- Experience 2 -->
+            <div class="col-lg-6 col-md-12">
+                <div class="content-box h-100 mb-0 d-flex flex-column">
                     <div class="role-title">Public Relations & Media Officer</div>
                     <div class="org-meta">LOOP Control Engineering Club (2024–2025)</div>
-                    <ul>
+                    <ul class="flex-grow-1">
                         <li>Managed the organization's public image and digital communication strategies.</li>
                         <li>Facilitated outreach and engagement for club seminars and technical workshops.</li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="content-box">
+            <!-- Experience 3 -->
+            <div class="col-lg-6 col-md-12">
+                <div class="content-box h-100 mb-0 d-flex flex-column">
                     <div class="role-title">Vice President & Active Member</div>
                     <div class="org-meta">ABOHO (KUET Environmental Club) & Try (Social Welfare Organization)</div>
-                    <ul>
+                    <ul class="flex-grow-1">
                         <li>Led environmental awareness campaigns and campus sustainability initiatives with ABOHO.</li>
                         <li>Contributed to local community support and social welfare projects through Try.</li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="content-box">
+            <!-- Experience 4 -->
+            <div class="col-lg-6 col-md-12">
+                <div class="content-box h-100 mb-0 d-flex flex-column">
                     <div class="role-title">Debater & Competitor</div>
                     <div class="org-meta">Regional & National Competitions</div>
-                    <ul>
+                    <ul class="flex-grow-1">
                         <li><strong>Champion:</strong> Regional Debate Tournament (2021).</li>
                         <li><strong>Finalist:</strong> BUET IPE Case Competition (2023).</li>
                     </ul>
                 </div>
-
             </div>
+
+        </div>
+        <!-- FOOTER -->
+        <div class="custom-footer">
+            Site last updated: <span id="last-updated-date"></span> &bull;
+            &copy; <span id="current-year"></span> Ashfaqur Rahman (BSc. in IPE, KUET) &bull;
+            <!-- Khulna University of Engineering & Technology, Dept. of Industrial & Production Engineering &bull; -->
+            <a href="mailto:your.email@email.com">your.email@email.com</a>
         </div>
     </div>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- True Automatic Date & Copyright Script (via GitHub API) -->
+    <script>
+        // 1. Automatically updates the copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 2. Automatically pulls the exact date of your last GitHub commit
+        fetch('https://api.github.com/repos/AshfaqurRahman99/AshfaqurRahman99.github.io/commits?per_page=1')
+            .then(response => response.json())
+            .then(data => {
+                const commitDate = new Date(data[0].commit.committer.date);
+                const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('last-updated-date').textContent = commitDate.toLocaleDateString('en-US', dateOptions);
+            })
+            .catch(error => {
+                // Fallback if the API is temporarily busy
+                document.getElementById('last-updated-date').textContent = "Recently Updated";
+            });
+    </script>
 </body>
 
 </html>
