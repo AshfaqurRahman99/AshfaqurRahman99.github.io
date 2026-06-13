@@ -674,5 +674,32 @@
             document.getElementById('last-updated-date').textContent = "Recently Updated";
         });
 </script>
+<!-- Fully Automatic Image Counter Script -->
+    <!-- Universal Automatic Image Counter Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Find ALL galleries on the page automatically
+            const allCarousels = document.querySelectorAll('.carousel');
+
+            allCarousels.forEach(function (carousel) {
+                // Find the specific counter directly underneath THIS specific gallery
+                const counter = carousel.parentElement.querySelector('.carousel-counter');
+
+                if (counter) {
+                    // Count the images for this specific gallery
+                    const totalSlides = carousel.querySelector('.carousel-inner').children.length;
+
+                    // Set the starting text
+                    counter.textContent = `Image 1 of ${totalSlides}`;
+
+                    // Update only this counter when this gallery slides
+                    carousel.addEventListener('slid.bs.carousel', function (e) {
+                        const currentSlide = e.to + 1;
+                        counter.textContent = `Image ${currentSlide} of ${totalSlides}`;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
