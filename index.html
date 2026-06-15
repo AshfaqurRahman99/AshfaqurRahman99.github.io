@@ -313,6 +313,203 @@
         a:hover .sidebar-icon {
             color: #2563eb;
         }
+
+        /* -------------------------
+           DARK MODE: OVERRIDE BOOTSTRAP BACKGROUNDS & GHOST TEXT
+           ------------------------- */
+
+        /* Force structural backgrounds to turn dark */
+        body.dark-theme .bg-white,
+        body.dark-theme .bg-light,
+        body.dark-theme .sidebar,
+        body.dark-theme [style*="background-color: white"],
+        body.dark-theme [style*="background-color: #ffffff"] {
+            background-color: #0f172a !important;
+        }
+
+        /* Fix Navbar Links (Make them visible) */
+        body.dark-theme .navbar .nav-link {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-theme .navbar .nav-link:hover,
+        body.dark-theme .navbar .nav-link.active {
+            color: #60a5fa !important;
+        }
+
+        /* Fix Education Titles and any lingering black bold text */
+        body.dark-theme strong,
+        body.dark-theme h4,
+        body.dark-theme h5,
+        body.dark-theme .fw-bold {
+            color: #f8fafc !important;
+        }
+
+        /* Fix Paragraphs, Lists, and About Text */
+        body.dark-theme p,
+        body.dark-theme li,
+        body.dark-theme span {
+            color: #cbd5e1 !important;
+        }
+
+        /* Fix specific inline gray text (like University Names) */
+        body.dark-theme [style*="color: #64748b"],
+        body.dark-theme .text-muted {
+            color: #94a3b8 !important;
+        }
+
+        /* Ensure structural borders turn dark */
+        body.dark-theme hr,
+        body.dark-theme .border-bottom,
+        body.dark-theme .border-end,
+        body.dark-theme .border-top {
+            border-color: #334155 !important;
+        }
+
+        /* -------------------------
+           DARK MODE STYLES
+           ------------------------- */
+        body.dark-theme {
+            background-color: #0f172a;
+            color: #cbd5e1;
+        }
+
+        /* Navbars & Headings */
+        body.dark-theme .navbar {
+            background-color: #1e293b !important;
+            border-bottom: 1px solid #334155 !important;
+        }
+
+        body.dark-theme .navbar-brand,
+        body.dark-theme .back-link,
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3 {
+            color: #f8fafc !important;
+        }
+
+        body.dark-theme .back-link:hover {
+            color: #60a5fa !important;
+        }
+
+        /* Content Boxes & Skills Cards */
+        body.dark-theme .content-box,
+        body.dark-theme .skills-container {
+            background-color: #1e293b;
+            border-color: #334155;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Text, Titles, and Meta Information */
+        body.dark-theme .text-muted,
+        body.dark-theme .org-meta {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-theme .role-title,
+        body.dark-theme .skill-category {
+            color: #60a5fa;
+            /* Lighter blue for dark background contrast */
+        }
+
+        body.dark-theme .skill-tools {
+            color: #e2e8f0;
+        }
+
+        /* Borders & Lines */
+        body.dark-theme li[style*="border-bottom"],
+        body.dark-theme h2[style*="border-bottom"],
+        body.dark-theme .skill-row {
+            border-bottom-color: #334155 !important;
+        }
+
+        /* Buttons */
+        body.dark-theme .btn-custom-blue,
+        body.dark-theme .btn-outline-primary {
+            border-color: #60a5fa;
+            color: #60a5fa;
+        }
+
+        body.dark-theme .btn-custom-blue:hover,
+        body.dark-theme .btn-outline-primary:hover {
+            background-color: #60a5fa;
+            color: #0f172a;
+        }
+
+        /* Force inline styles to turn white in dark mode */
+        body.dark-theme div[style*="color: #0f172a"],
+        body.dark-theme div[style*="color: #0f172a;"] {
+            color: #f8fafc !important;
+        }
+
+        body.dark-theme div[style*="color: #64748b"],
+        body.dark-theme div[style*="color: #64748b;"] {
+            color: #94a3b8 !important;
+        }
+
+        /* End of Dark mode CSS 1st part for index.html*/
+        
+        /* ------------------------- Second part of dark mode for Index.html 
+           ULTIMATE RIGHT-COLUMN BACKGROUND FIX
+           ------------------------- */
+
+        /* Force the layout columns and common white hex codes to turn dark */
+        body.dark-theme .col-md-8,
+        body.dark-theme .col-md-9,
+        body.dark-theme .col-lg-8,
+        body.dark-theme .col-lg-9,
+        body.dark-theme div[style*="#fff"],
+        body.dark-theme div[style*="#ffffff"],
+        body.dark-theme div[style*="white"],
+        body.dark-theme .bg-body {
+            background-color: #0f172a !important;
+        }
+
+        /* -------------------------
+           BULLETPROOF BUTTON & FOOTER FIX
+           ------------------------- */
+
+        /* 1. Download CV Button Rules */
+        #cv-download-btn {
+            background-color: #0f172a !important;
+            /* Dark color for Light Mode */
+            border: 2px solid #0f172a !important;
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-theme #cv-download-btn {
+            background-color: #234f42 !important;
+            /* Vibrant Blue for Dark Mode */
+            border-color: #2563eb !important;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4) !important;
+        }
+
+        body.dark-theme #cv-download-btn:hover {
+            background-color: #1d4ed8 !important;
+            /* Darker blue on hover */
+        }
+
+        /* 2. Footer Divider Rules */
+        #site-footer {
+            margin-top: 3rem !important;
+            padding-top: 1.5rem !important;
+            border-top: 1px solid #e2e8f0 !important;
+            /* Gray line for Light Mode */
+        }
+
+        body.dark-theme #site-footer {
+            border-top: 1px solid #334155 !important;
+            /* Dark Slate line for Dark Mode */
+        }
+
+        /* footer box dark mode */
+        body.dark-theme .dark-footer {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        }
+        
     </style>
 </head>
 <body>
@@ -841,7 +1038,7 @@
                 </div>
 
             <!-- FOOTER -->
-             <div class="custom-footer">
+             <div class="custom-footer dark-footer">
                 Site last updated: <span id="last-updated-date"></span> &bull;
                 &copy; <span id="current-year"></span> Ashfaqur Rahman (BSc. in IPE, KUET) &bull;
                 <!-- Khulna University of Engineering & Technology, Dept. of Industrial & Production Engineering &bull; -->
