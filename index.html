@@ -1076,15 +1076,19 @@
         <i class="fa-solid fa-moon" style="font-size: 1.2rem;"></i>
     </button>
     <!-- Dark Mode Logic -->
+    <!-- Someone's preference is dark theme and other's is light theme so I adjusted the logic accordingly -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const themeToggle = document.getElementById('theme-toggle');
             const body = document.body;
             const icon = themeToggle.querySelector('i');
 
-            // 1. Check browser memory for saved theme on page load
+            // 1. Check browser memory AND system preference on page load
             const currentTheme = localStorage.getItem('theme');
-            if (currentTheme === 'dark') {
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            // Load dark mode if saved in memory, OR if it's the first visit (null) and the device is in dark mode
+            if (currentTheme === 'dark' || (currentTheme === null && systemPrefersDark)) {
                 body.classList.add('dark-theme');
                 icon.classList.replace('fa-moon', 'fa-sun');
                 themeToggle.classList.replace('btn-dark', 'btn-light');
