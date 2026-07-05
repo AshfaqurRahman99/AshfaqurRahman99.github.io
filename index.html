@@ -349,6 +349,21 @@
             .content-box {
                 padding: 25px;
             }
+            /*  Mobile Dropdown Icon (Hamburger) Fix */
+            body.dark-theme .navbar-toggler-icon {
+                /* Inverts the default dark gray icon to bright white */
+                filter: invert(1) grayscale(100%) brightness(200%) !important;
+            }
+
+            body.dark-theme .navbar-toggler {
+                /* Makes the border ring around the icon visible but subtle */
+                border-color: rgba(248, 250, 252, 0.2) !important;
+            }
+
+            body.dark-theme .navbar-toggler:focus {
+                /* Adds a clean glowing outline when tapped on mobile */
+                box-shadow: 0 0 0 0.25rem rgba(96, 165, 250, 0.25) !important;
+            }
         }
 
         /* Sidebar Icon Alignment & Color */
