@@ -1141,40 +1141,50 @@
     <!-- Dark Mode Logic -->
     <!-- Someone's preference is dark theme and other's is light theme so I adjusted the logic accordingly -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
-            const icon = themeToggle.querySelector('i');
+    document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
 
-            // 1. Check browser memory AND system preference on page load
-            const currentTheme = localStorage.getItem('theme');
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // 1. ALWAYS check the system preference on page load (No memory overrides!)
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-            // Load dark mode if saved in memory, OR if it's the first visit (null) and the device is in dark mode
-            if (currentTheme === 'dark' || (currentTheme === null && systemPrefersDark)) {
+        // Apply whatever the system is using right now
+        if (systemPrefersDark.matches) {
+            body.classList.add('dark-theme');
+            icon.classList.replace('fa-moon', 'fa-sun');
+            themeToggle.classList.replace('btn-dark', 'btn-light');
+        }
+
+        // 2. Listen for clicks so the user can manually toggle it if they want
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
+
+            if (body.classList.contains('dark-theme')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                themeToggle.classList.replace('btn-dark', 'btn-light');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                themeToggle.classList.replace('btn-light', 'btn-dark');
+            }
+        });
+
+        // 3. SMART UPGRADE: Change instantly if they change their device settings while the site is open
+        systemPrefersDark.addEventListener('change', event => {
+            if (event.matches) {
+                // Device switched to Dark Mode
                 body.classList.add('dark-theme');
                 icon.classList.replace('fa-moon', 'fa-sun');
                 themeToggle.classList.replace('btn-dark', 'btn-light');
+            } else {
+                // Device switched to Light Mode
+                body.classList.remove('dark-theme');
+                icon.classList.replace('fa-sun', 'fa-moon');
+                themeToggle.classList.replace('btn-light', 'btn-dark');
             }
-
-            // 2. Listen for clicks to toggle the theme .
-            themeToggle.addEventListener('click', function () {
-                body.classList.toggle('dark-theme');
-
-                if (body.classList.contains('dark-theme')) {
-                    // Switch to Dark Mode
-                    localStorage.setItem('theme', 'dark');
-                    icon.classList.replace('fa-moon', 'fa-sun');
-                    themeToggle.classList.replace('btn-dark', 'btn-light');
-                } else {
-                    // Switch back to Light Mode
-                    localStorage.setItem('theme', 'light');
-                    icon.classList.replace('fa-sun', 'fa-moon');
-                    themeToggle.classList.replace('btn-light', 'btn-dark');
-                }
-            });
         });
-    </script>
+    });
+</script>
 
 <!-- Bootstrap JS (Powers the Mobile Dropdown Menu) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
