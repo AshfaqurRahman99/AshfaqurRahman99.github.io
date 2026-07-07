@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Experience | Ashfaqur Rahman</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); /* REMEMBER TO PASTE YOUR ACTUAL ID HERE */
+    </script>
+
+    <style>
+        html {
+            font-size: 85%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            background-color: #f8fafc;
+            line-height: 1.7;
+            padding-top: 80px;
+        }
+
+        /* Navbar & Basic Styling */
+        .navbar {
+            background-color: #ffffff !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #0f172a !important;
+        }
+
+        .back-link {
+            font-weight: 600;
+            color: #475569;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #2563eb;
+        }
+
+        /* Content Boxes */
+        .content-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e2e8f0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .role-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .org-meta {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Styling */
+        .carousel-inner {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 220px;
+            }
+
+            .content-box {
+                padding: 25px 20px;
+            }
+        }
+
+        /* Footer Styling */
+        .custom-footer {
+            background-color: #0f172a;
+            /* Deep blue to match your buttons */
+            color: #f8fafc;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.9rem;
+            margin-top: 60px;
+            border-radius: 8px;
+            /* Remove this line if you want sharp square corners */
+        }
+
+        .custom-footer a {
+            color: #93c5fd;
+            /* Light blue link color so it shows up on dark background */
+        }
+
+        .custom-footer a:hover {
+            color: #eff6ff;
+            text-decoration: underline;
+        }
+
+        /* -------------------------
+           READ MORE / MINIMIZE TEXT FEATURE
+           ------------------------- */
+        .text-collapse {
+            max-height: 140px;
+            /* Limits the height to approximately 2-3 bullet points */
+            overflow: hidden;
+            position: relative;
+            transition: max-height 0.4s ease-in-out;
+            margin-bottom: 5px !important;
+        }
+
+        .text-collapse.expanded {
+            max-height: 1000px;
+
+            /* Allows the box to expand fully */
+        }
+
+        /* -------------------------
+           UPGRADED "PILL" READ MORE BUTTON
+           ------------------------- */
+        .read-more-btn {
+            background-color: #eff6ff;
+            /* Soft light blue background */
+            border: 1px solid #bfdbfe;
+            /* Subtle blue border */
+            color: #2563eb;
+            /* Vibrant blue text */
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            /* Adds breathing room around the text */
+            border-radius: 20px;
+            /* Creates the gorgeous rounded pill shape */
+            margin-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+            display: none;
+            /* Hidden by default; JavaScript reveals it */
+            transition: all 0.2s ease-in-out;
+            align-self: flex-start;
+            /* Keeps the button neatly on the left side */
+        }
+
+        .read-more-btn:hover {
+            background-color: #dbeafe;
+            /* Slightly darker on hover */
+            text-decoration: none;
+            /* Removes the basic underline */
+            transform: translateY(-1px);
+            /* Adds a premium subtle "lift" effect */
+            box-shadow: 0 2px 5px rgba(37, 99, 235, 0.15);
+            /* Soft shadow on hover */
+        }
+
+        /* Dark Mode Button Colors */
+        body.dark-theme .read-more-btn {
+            background-color: #1e3a8a;
+            /* Deep, rich blue background */
+            border-color: #1e40af;
+            color: #93c5fd;
+            /* Light blue text for high contrast */
+        }
+
+        body.dark-theme .read-more-btn:hover {
+            background-color: #1e40af;
+            /* Brighter blue on hover in dark mode */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* -------------------------
+           MASTER DARK MODE FIX 
+           ------------------------- */
+        body.dark-theme {
+            background-color: #0f172a !important;
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-theme .navbar,
+        body.dark-theme .content-box {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme h3,
+        body.dark-theme div[style*="color: #0f172a"] {
+            color: #f8fafc !important;
+        }
+
+        body.dark-theme .role-title {
+            color: #60a5fa !important;
+        }
+
+        body.dark-theme .org-meta {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-theme p,
+        body.dark-theme li,
+        body.dark-theme .text-muted {
+            color: #e6e6e6 !important;
+        }
+
+        body.dark-theme .navbar-brand,
+        body.dark-theme .back-link {
+            color: #f8fafc !important;
+        }
+
+        body.dark-theme .back-link:hover {
+            color: #60a5fa !important;
+        }
+
+        /* footer box dark mode */
+        body.dark-theme .dark-footer {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top border-bottom">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">Ashfaqur Rahman</a>
+            <div class="ms-auto">
+                <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-4 px-lg-5 mt-4 mb-5" style="max-width: 1500px;">
+
+        <div class="text-center mb-5">
+            <h2 class="mb-3">Leadership & Organizational Experience</h2>
+            <p class="lead text-muted">A deeper look into my organizational roles, event management experience, and
+                community leadership.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <div class="row g-4 mb-5">
+
+                <!-- LEADERSHIP 1: Technomize 1.0 -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-1" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Organizing Lead | Technomize 1.0 National Tech Fest (via IRCC)</div>
+
+                        <div class="org-meta"><a href="https://www.facebook.com/share/1CfLY81GSZ/" target="_blank">Click
+                                here to visit Technomize facebook page</a></div>
+
+                        <ul class="ps-3 text-collapse" style="color: inherit;">
+                            <li class="mb-2"><strong>Strategic Event Planning:</strong> Spearheaded the end-to-end
+                                detailed planning and execution of Technomize 1.0, successfully establishing the
+                                inaugural national tech fest
+                                under the IRCC banner.</li>
+                            <li class="mb-2"><strong>High-Impact, Low-Budget Marketing:</strong> Devised an innovative
+                                "Ad Making Contest" to bypass severe budget constraints, driving massive organic
+                                promotion and far exceeding initial engagement expectations.</li>
+                            <li class="mb-2"><strong>Large-Scale Outreach Campaigns:</strong> Orchestrated a
+                                comprehensive digital
+                                and grassroots marketing strategy—leveraging campus ambassadors, club partnerships, and
+                                social media—successfully reaching over 16,000+ students across 35 universities.
+                            </li>
+                            <li class="mb-2"><strong>Sponsorship & Stakeholder Management:</strong> Managed critical
+                                communications
+                                and negotiations with
+                                sponsors to secure funding, while ensuring a seamless information flow between expected
+                                and registered participants, judges, campus ambassadors, and partner clubs.
+                            </li>
+                            <li class="mb-2"><strong>Logistics & Operational Execution:</strong> Directed
+                                on-ground operations and supply chain logistics,
+                                ensuring all segment requirements, technical setups, and event goodies were flawlessly
+                                positioned prior to each phase of the fest.
+                            </li>
+                        </ul>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read More &darr;</button>
+                        <!-- <ul class="flex-grow-1 ps-3 mb-4" style="color: inherit;">
+
+                        </ul> -->
+
+                        <!-- Universal Gallery for Leadership 1 -->
+                        <div id="carousel-l1" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/1/1.jpg" alt="Technomize Event">
+                                </div>
+                                <div class="carousel-item"><img src="Gallery/1/2.jpg" alt="Team Mentorship"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l1"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l1"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LEADERSHIP 2: IEM Robotics and CAD Club  -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-2" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Former President</div>
+                        <div class="org-meta">IEM Robotics and CAD Club (2024-2025)</div>
+
+                        <ul class="ps-3 text-collapse" style="color: inherit;">
+                            <li class="mb-2">Served as the Lead Organizer for the <strong>Technomize 1.0 National Tech
+                                    Fest</strong>.</li>
+                            <li class="mb-2">Coordinated logistics, managed cross-functional student teams, and oversaw
+                                the successful execution of multiple technical competitions.</li>
+                            <li>Mentored junior students and provided coaching to peers in academic and technical
+                                community building.</li>
+                        </ul>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read More &darr;</button>
+
+                        <!-- Universal Gallery for Leadership 2 -->
+                        <div id="carousel-l2" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/1/1.jpg" alt="IRCC Event"></div>
+                                <div class="carousel-item"><img src="Gallery/1/2.jpg" alt="IRCC Campaign"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l2"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l2"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LEADERSHIP 3: Former Public Relation Officer  -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-3" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Former Public Relation Officer</div>
+                        <div class="org-meta">IMechE KUET Student Chapter (2024-2025)</div>
+
+                        <ul class="ps-3 text-collapse" style="color: inherit;">
+                            <li class="mb-2">Served as the Lead Organizer for the <strong>Technomize 1.0 National Tech
+                                    Fest</strong>.</li>
+                            <li class="mb-2">Coordinated logistics, managed cross-functional student teams, and oversaw
+                                the successful execution of multiple technical competitions.</li>
+                            <li>Mentored junior students and provided coaching to peers in academic and technical
+                                community building.</li>
+                        </ul>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read More &darr;</button>
+
+                        <!-- Universal Gallery for Leadership 3 -->
+                        <div id="carousel-l3" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/1/1.jpg" alt="ImechE Event 1"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l3"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l3"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LEADERSHIP 4: ABOHO (Environmental Club of KUET ) -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-4" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Former Vice President (Founding Member)</div>
+                        <div class="org-meta">ABOHO (Environmental Club of KUET) <small>(2024-2025)</small></div>
+
+                        <ul class="ps-3 text-collapse" style="color: inherit;">
+                            <li class="mb-2">Served as the Lead Organizer for the <strong>Technomize 1.0 National Tech
+                                    Fest</strong>.</li>
+                            <li class="mb-2">Coordinated logistics, managed cross-functional student teams, and oversaw
+                                the successful execution of multiple technical competitions.</li>
+                            <li>Mentored junior students and provided coaching to peers in academic and technical
+                                community building.</li>
+                        </ul>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read More &darr;</button>
+
+                        <!-- Universal Gallery for Leadership 4 -->
+                        <div id="carousel-l4" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/Leadership/Aboho/1.png"
+                                        alt="ABOHO Event 1"></div>
+                                <div class="carousel-item active"><img src="Gallery/Leadership/Aboho/2.png"
+                                        alt="ABOHO Event 1"></div>
+                                <div class="carousel-item active"><img src="Gallery/Leadership/Aboho/3.png"
+                                        alt="ABOHO Event 2"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l4"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l4"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LEADERSHIP 5: Ghorar Gari -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-5" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Digital Infrastructure Developer</div>
+                        <div class="org-meta">Ghorar Gari (Hansom) Brand</div>
+
+                        <ul class="flex-grow-1 ps-3 mb-4" style="color: inherit;">
+                            <li class="mb-2">Spearheaded the development and launch of the digital infrastructure for a
+                                lifestyle and clothing brand.</li>
+                            <li class="mb-2">Designed the website architecture and established the brand's primary
+                                social media presence.</li>
+                        </ul>
+
+                        <!-- Universal Gallery for Leadership 5 -->
+                        <div id="carousel-l5" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/Leadership/ghorar_gari1.jpg"
+                                        alt="Ghorar Gari Project"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l5"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l5"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LOOP (Control Engineering Club of KUET) -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-6" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Former Public Relations & Media Officer</div>
+                        <div class="org-meta">LOOP (Control Engineering Club of KUET) <small>(2024-2025)</small></div>
+
+                        <ul class="ps-3 text-collapse" style="color: inherit;">
+                            <li class="mb-2">Managed the club's social media presence and created engaging content to
+                                promote events and initiatives.</li>
+                            <li class="mb-2">Handled public relations duties, including media outreach and coordination
+                                with external partners.</li>
+                            <li class="mb-2">Handled public relations duties, including media outreach and coordination
+                                with external partners.</li>
+                        </ul>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read More &darr;</button>
+
+                        <!-- Universal Gallery for Leadership 6 -->
+                        <div id="carousel-l6" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/1/1.jpg" alt="Event"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l6"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l6"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LEADERSHIP 7: Placeholder -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-7" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Former Debater</div>
+                        <div class="org-meta">KUET Debating Society (KDS) <small>(2020-2023)</small></div>
+
+                        <ul class="ps-3 text-collapse" style="color: inherit;">
+                            <li class="mb-2">Managed the club's social media presence and created engaging content to
+                                promote events and initiatives.</li>
+                            <li class="mb-2">Handled public relations duties, including media outreach and coordination
+                                with external partners.</li>
+                            <li class="mb-2">Handled public relations duties, including media outreach and coordination
+                                with external partners.</li>
+                        </ul>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read More &darr;</button>
+
+                        <!-- Universal Gallery for Leadership 7 -->
+                        <div id="carousel-l7" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/1/1.jpg" alt="Event"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l7"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l7"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- Team KILO FLIGHT - (Fuel, Cooling & Lubrication subteam) -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-8" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">Former Junior Team Member</div>
+                        <div class="org-meta">Team KILO FLIGHT - (Fuel, Cooling & Lubrication subteam)
+                            <small> (2021-2022)</small>
+                        </div>
+
+                        <ul class="ps-3 text-collapse" style="color: inherit;">
+                            <li class="mb-2">Managed the club's social media presence and created engaging content to
+                                promote events and initiatives.</li>
+                            <li class="mb-2">Handled public relations duties, including media outreach and coordination
+                                with external partners.</li>
+                            <li class="mb-2">Handled public relations duties, including media outreach and coordination
+                                with external partners.</li>
+                        </ul>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read More &darr;</button>
+
+                        <!-- Universal Gallery for Leadership 8 -->
+                        <div id="carousel-l8" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/1/1.jpg" alt="Event"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l8"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l8"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LEADERSHIP 9: Placeholder -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-9" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">[Your Role 9]</div>
+                        <div class="org-meta">[Organization Name]</div>
+
+                        <ul class="flex-grow-1 ps-3 mb-4" style="color: inherit;">
+                            <li class="mb-2">[Detail your responsibilities and achievements here.]</li>
+                            <li class="mb-2">[Detail another accomplishment here.]</li>
+                        </ul>
+
+                        <!-- Universal Gallery for Leadership 9 -->
+                        <div id="carousel-l9" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/Leadership/placeholder.jpg"
+                                        alt="Event"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l9"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l9"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+                <!-- LEADERSHIP 10: Placeholder -->
+                <div class="col-lg-6 col-md-12">
+                    <div id="leadership-10" class="content-box h-100 d-flex flex-column">
+                        <div class="role-title">[Your Role 10]</div>
+                        <div class="org-meta">[Organization Name]</div>
+
+                        <ul class="flex-grow-1 ps-3 mb-4" style="color: inherit;">
+                            <li class="mb-2">[Detail your responsibilities and achievements here.]</li>
+                            <li class="mb-2">[Detail another accomplishment here.]</li>
+                        </ul>
+
+                        <!-- Universal Gallery for Leadership 10 -->
+                        <div id="carousel-l10" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active"><img src="Gallery/Leadership/placeholder.jpg"
+                                        alt="Event"></div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l10"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l10"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                        <div class="carousel-counter text-center mt-2 text-muted"
+                            style="font-size: 0.85rem; font-weight: 600;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="custom-footer dark-footer">
+            Site last updated: <span id="last-updated-date"></span> &bull;
+            &copy; <span id="current-year"></span> Ashfaqur Rahman (BSc. in IPE, KUET) &bull;
+            <!-- Khulna University of Engineering & Technology, Dept. of Industrial & Production Engineering &bull; -->
+            <a href="mailto:your.email@email.com">your.email@email.com</a>
+        </div>
+    </div>
+
+
+
+
+    <button id="theme-toggle" class="btn btn-dark"
+        style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; border-radius: 50px; width: 50px; height: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;">
+        <i class="fa-solid fa-moon" style="font-size: 1.2rem;"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const allCarousels = document.querySelectorAll('.carousel');
+            allCarousels.forEach(function (carousel) {
+                const counter = carousel.parentElement.querySelector('.carousel-counter');
+                if (counter) {
+                    const totalSlides = carousel.querySelector('.carousel-inner').children.length;
+                    if (totalSlides <= 1) {
+                        counter.style.display = 'none';
+                        const prevBtn = carousel.querySelector('.carousel-control-prev');
+                        const nextBtn = carousel.querySelector('.carousel-control-next');
+                        if (prevBtn) prevBtn.style.display = 'none';
+                        if (nextBtn) nextBtn.style.display = 'none';
+                    } else {
+                        counter.textContent = `Image 1 of ${totalSlides}`;
+                        carousel.addEventListener('slid.bs.carousel', function (e) {
+                            const currentSlide = e.to + 1;
+                            counter.textContent = `Image ${currentSlide} of ${totalSlides}`;
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const icon = themeToggle.querySelector('i');
+
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                body.classList.add('dark-theme');
+                icon.classList.replace('fa-moon', 'fa-sun');
+                themeToggle.classList.replace('btn-dark', 'btn-light');
+            }
+
+            themeToggle.addEventListener('click', function () {
+                body.classList.toggle('dark-theme');
+
+                if (body.classList.contains('dark-theme')) {
+                    localStorage.setItem('theme', 'dark');
+                    icon.classList.replace('fa-moon', 'fa-sun');
+                    themeToggle.classList.replace('btn-dark', 'btn-light');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    icon.classList.replace('fa-sun', 'fa-moon');
+                    themeToggle.classList.replace('btn-light', 'btn-dark');
+                }
+            });
+        });
+    </script>
+
+    <!-- Read More / Minimize Text Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const collapseContainers = document.querySelectorAll('.text-collapse');
+
+            collapseContainers.forEach(function (container) {
+                // Check if the text inside the list is taller than the max-height limit
+                if (container.scrollHeight > container.clientHeight) {
+                    // If it overflows, reveal the "Read More" button
+                    const btn = container.nextElementSibling;
+                    if (btn && btn.classList.contains('read-more-btn')) {
+                        btn.style.display = 'inline-block';
+                    }
+                }
+            });
+        });
+
+        // The function that runs when the button is clicked
+        function toggleReadMore(btn) {
+            const container = btn.previousElementSibling;
+            container.classList.toggle('expanded');
+
+            if (container.classList.contains('expanded')) {
+                btn.innerHTML = 'Minimize text &uarr;';
+            } else {
+                btn.innerHTML = 'Read More &darr;';
+            }
+        }
+    </script>
+
+    <!-- True Automatic Date & Copyright Script (via GitHub API) -->
+    <script>
+        // 1. Automatically updates the copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 2. Automatically pulls the exact date of your last GitHub commit
+        fetch('https://api.github.com/repos/AshfaqurRahman99/AshfaqurRahman99.github.io/commits?per_page=1')
+            .then(response => response.json())
+            .then(data => {
+                const commitDate = new Date(data[0].commit.committer.date);
+                const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('last-updated-date').textContent = commitDate.toLocaleDateString('en-US', dateOptions);
+            })
+            .catch(error => {
+                // Fallback if the API is temporarily busy
+                document.getElementById('last-updated-date').textContent = "Recently Updated";
+            });
+    </script>
+</body>
+
+</html>
