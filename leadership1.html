@@ -701,30 +701,60 @@
         });
     </script>
 
+    <!-- Dark Mode Logic -->
+    <!-- This logic picks the browser's theme and next response and memorize user's preference -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const themeToggle = document.getElementById('theme-toggle');
             const body = document.body;
             const icon = themeToggle.querySelector('i');
 
-            const currentTheme = localStorage.getItem('theme');
-            if (currentTheme === 'dark') {
+            // 1. Check system preference and user's saved memory
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+            const savedTheme = localStorage.getItem('user_theme_priority');
+
+            // 2. Decide what to load: User Memory is #1 Priority, System Setting is #2
+            if (savedTheme === 'dark' || (savedTheme === null && systemPrefersDark.matches)) {
+                // Apply Dark Mode
                 body.classList.add('dark-theme');
                 icon.classList.replace('fa-moon', 'fa-sun');
                 themeToggle.classList.replace('btn-dark', 'btn-light');
+            } else {
+                // Ensure Light Mode is strictly applied
+                body.classList.remove('dark-theme');
+                if (icon.classList.contains('fa-sun')) icon.classList.replace('fa-sun', 'fa-moon');
+                if (themeToggle.classList.contains('btn-light')) themeToggle.classList.replace('btn-light', 'btn-dark');
             }
 
+            // 3. Listen for clicks, toggle theme, and SAVE the user's manual choice
             themeToggle.addEventListener('click', function () {
                 body.classList.toggle('dark-theme');
 
                 if (body.classList.contains('dark-theme')) {
-                    localStorage.setItem('theme', 'dark');
+                    // Switched to Dark manually
+                    localStorage.setItem('user_theme_priority', 'dark');
                     icon.classList.replace('fa-moon', 'fa-sun');
                     themeToggle.classList.replace('btn-dark', 'btn-light');
                 } else {
-                    localStorage.setItem('theme', 'light');
+                    // Switched to Light manually
+                    localStorage.setItem('user_theme_priority', 'light');
                     icon.classList.replace('fa-sun', 'fa-moon');
                     themeToggle.classList.replace('btn-light', 'btn-dark');
+                }
+            });
+
+            // 4. Live Sync: Only switch automatically if the user HAS NOT clicked the button yet
+            systemPrefersDark.addEventListener('change', event => {
+                if (localStorage.getItem('user_theme_priority') === null) {
+                    if (event.matches) {
+                        body.classList.add('dark-theme');
+                        icon.classList.replace('fa-moon', 'fa-sun');
+                        themeToggle.classList.replace('btn-dark', 'btn-light');
+                    } else {
+                        body.classList.remove('dark-theme');
+                        icon.classList.replace('fa-sun', 'fa-moon');
+                        themeToggle.classList.replace('btn-light', 'btn-dark');
+                    }
                 }
             });
         });
