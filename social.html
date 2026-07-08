@@ -91,6 +91,18 @@
             object-fit: cover;
             /* Ensures portrait and landscape photos look good without stretching */
         }
+        /* -------------------------
+           CAROUSEL IMAGE 16:9 LOCK
+           ------------------------- */
+        .carousel-inner img {
+            width: 100% !important;
+            /* Forces image to fill the width of the box */
+            aspect-ratio: 16 / 9 !important;
+            /* Locks the mathematical ratio forever */
+            object-fit: cover !important;
+            /* Prevents the image from squishing */
+            display: block;
+        }
 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
