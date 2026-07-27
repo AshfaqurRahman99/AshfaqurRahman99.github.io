@@ -139,6 +139,77 @@
                 padding: 25px 20px;
             }
         }
+
+        /* -------------------------
+           READ MORE / MINIMIZE TEXT FEATURE
+           ------------------------- */
+        .text-collapse {
+            max-height: 140px;
+            /* Limits the height to approximately 2-3 bullet points */
+            overflow: hidden;
+            position: relative;
+            transition: max-height 0.4s ease-in-out;
+            margin-bottom: 5px !important;
+        }
+
+        .text-collapse.expanded {
+            max-height: 1000px;
+
+            /* Allows the box to expand fully */
+        }
+
+        /* -------------------------
+           UPGRADED "PILL" READ MORE BUTTON
+           ------------------------- */
+        .read-more-btn {
+            background-color: #eff6ff;
+            /* Soft light blue background */
+            border: 1px solid #bfdbfe;
+            /* Subtle blue border */
+            color: #2563eb;
+            /* Vibrant blue text */
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            /* Adds breathing room around the text */
+            border-radius: 20px;
+            /* Creates the gorgeous rounded pill shape */
+            margin-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+            display: none;
+            /* Hidden by default; JavaScript reveals it */
+            transition: all 0.2s ease-in-out;
+            align-self: flex-start;
+            /* Keeps the button neatly on the left side */
+        }
+
+        .read-more-btn:hover {
+            background-color: #dbeafe;
+            /* Slightly darker on hover */
+            text-decoration: none;
+            /* Removes the basic underline */
+            transform: translateY(-1px);
+            /* Adds a premium subtle "lift" effect */
+            box-shadow: 0 2px 5px rgba(37, 99, 235, 0.15);
+            /* Soft shadow on hover */
+        }
+
+        /* Dark Mode Button Colors */
+        body.dark-theme .read-more-btn {
+            background-color: #1e3a8a;
+            /* Deep, rich blue background */
+            border-color: #1e40af;
+            color: #93c5fd;
+            /* Light blue text for high contrast */
+        }
+
+        body.dark-theme .read-more-btn:hover {
+            background-color: #1e40af;
+            /* Brighter blue on hover in dark mode */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
         /* -------------------------
            MASTER DARK MODE FIX (For Sub-Pages)
            ------------------------- */
