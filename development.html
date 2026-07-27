@@ -650,6 +650,37 @@
                 document.getElementById('last-updated-date').textContent = "Recently Updated";
             });
     </script>
+
+<!-- Read More / Minimize Text Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const collapseContainers = document.querySelectorAll('.text-collapse');
+
+            collapseContainers.forEach(function (container) {
+                // Check if the text inside the list is taller than the max-height limit
+                if (container.scrollHeight > container.clientHeight) {
+                    // If it overflows, reveal the "Read More" button
+                    const btn = container.nextElementSibling;
+                    if (btn && btn.classList.contains('read-more-btn')) {
+                        btn.style.display = 'inline-block';
+                    }
+                }
+            });
+        });
+
+        // The function that runs when the button is clicked
+        function toggleReadMore(btn) {
+            const container = btn.previousElementSibling;
+            container.classList.toggle('expanded');
+
+            if (container.classList.contains('expanded')) {
+                btn.innerHTML = 'Minimize text &uarr;';
+            } else {
+                btn.innerHTML = 'Read More &darr;';
+            }
+        }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4K5HJWJBHL"></script>
         <script>
