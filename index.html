@@ -155,6 +155,20 @@
             scroll-behavior: smooth;
         }
 
+        /* -------------------------
+           DYNAMIC COURSE ICONS
+           ------------------------- */
+        /* Light Mode Default */
+        .course-icon {
+            color: #0044aa; 
+            transition: color 0.3s ease; /* Adds a smooth fade when switching themes */
+        }
+        
+        /* Dark Mode Override */
+        body.dark-theme .course-icon {
+            color: sandybrown;
+        }
+
         /* Footer Styling */
         .custom-footer {
             background-color: #0f172a;
