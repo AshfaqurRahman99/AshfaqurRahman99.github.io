@@ -20,6 +20,28 @@
             scroll-behavior: smooth;
         }
 
+        /* Navbar & Basic Styling */
+        .navbar {
+            background-color: #ffffff !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: #0f172a !important;
+        }
+
+        .back-link {
+            font-weight: 600;
+            color: #475569;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #2563eb;
+        }
+
         /* -------------------------
            BASE THEME STYLES
            ------------------------- */
@@ -35,6 +57,61 @@
         body.dark-theme {
             background-color: #0b1120;
             color: #f8fafc;
+        }
+
+        /* -------------------------
+           MASTER DARK MODE FIX 
+           ------------------------- */
+        body.dark-theme {
+            background-color: #0f172a !important;
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-theme .navbar,
+        body.dark-theme .content-box {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        body.dark-theme h1,
+        body.dark-theme h2,
+        body.dark-theme div[style*="color: #0f172a"] {
+            color: #f8fafc !important;
+        }
+
+        body.dark-theme h3 {
+            color: sandybrown !important;
+        }
+
+        body.dark-theme .role-title {
+            color: #60a5fa !important;
+        }
+
+        body.dark-theme .org-meta {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-theme p,
+        body.dark-theme li,
+        body.dark-theme .text-muted {
+            color: #e6e6e6 !important;
+        }
+
+        body.dark-theme .navbar-brand,
+        body.dark-theme .back-link {
+            color: #f8fafc !important;
+        }
+
+        body.dark-theme .back-link:hover {
+            color: #60a5fa !important;
+        }
+
+        /* footer box dark mode */
+        body.dark-theme .dark-footer {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
         }
 
         /* -------------------------
@@ -62,10 +139,6 @@
             background-color: #1e293b;
             padding: 16px 0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .dark-theme.custom-header {
-            background-color: #e5e6e8;
         }
 
         .custom-header .logo-name {
@@ -126,7 +199,7 @@
         }
 
         body.dark-theme .course-icon {
-            color: sandybrown;
+            color: rgb(245, 119, 9);
         }
 
         /* Footer Styling */
@@ -180,19 +253,20 @@
 
 <body>
 
-    <!-- PERMANENT DARK HEADER -->
-    <header class="custom-header">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="index.html" class="logo-name">Ashfaqur Rahman</a>
-            <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+    <nav class="navbar navbar-expand-lg fixed-top border-bottom">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">Ashfaqur Rahman</a>
+            <div class="ms-auto">
+                <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- MAIN CONTENT -->
     <div class="container mb-5">
         <!-- Header -->
         <div class="text-center mb-5 mt-4">
-            <h1 class="fw-bold mb-3">Academic Curriculum</h1>
+            <h2 class="fw-bold mb-3">Comprehensive Undergraduate Coursework</h2>
             <h5 class="text-muted mb-2">B.Sc. in Industrial and Production Engineering (IPE)</h5>
             <p class="text-muted"><i class="fa-solid fa-building-columns me-2"></i>Khulna University of Engineering &
                 Technology (KUET)</p>
