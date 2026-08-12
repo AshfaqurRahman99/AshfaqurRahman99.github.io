@@ -639,6 +639,38 @@
             border-color: #334155 !important;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
         }
+        /* -------------------------
+           ASPIRANT HIGHLIGHT BADGE
+           ------------------------- */
+        /* Light Mode (Sleek Blue Badge) */
+        .aspirant-badge {
+            color: #ad8305;
+            /* color: #628600; */
+            /* color: #5c6778; */
+            /* color: #4a4f55; */
+            /* color: #2f4f5c; */
+            /* color: #0044aa; */
+            /* Deep professional blue */
+            /* background-color: #e6f0ff; */
+            /* Very soft blue background */
+            font-weight: 600;
+            /* padding: 0px 2px; */
+            /* border-radius: 50px; */
+            /* Makes it a pill shape */
+            display: inline-block;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            /* transition: all 0.3s ease; */
+        }
+
+        /* Dark Mode (Bright Yellow Badge) */
+        body.dark-theme .aspirant-badge {
+            color: #FFFF00 !important;
+            /* Your bright yellow */
+            /* background-color: rgba(255, 255, 0, 0.1);
+            /* Subtle yellow glow background */
+            /* border: 1px solid rgba(255, 255, 0, 0.3); */
+        }
         
     </style>
 </head>
@@ -672,7 +704,8 @@
             <div class="text-center text-lg-start">
                 <img src="profile.jpg" alt="Ashfaqur Rahman" class="profile-img">
                 <h1 class="h4 mb-1">Ashfaqur Rahman</h1>
-                <p class="text-muted mb-3" style="font-size: 0.95rem;">MSc/PhD Aspirant</p>
+                <p class="aspirant-badge">Prospective MSc/PhD Student</p>
+                <!-- <p class="text-muted mb-3" style="font-size: 0.95rem;">MSc/PhD Aspirant</p> -->
                 <!-- <p class="text-muted mb-3" style="font-size: 0.95rem;">Operations & Supply Chain Engineer</p> -->
                 
                 <!-- <div style="font-size: 0.9rem; line-height: 1.8;">
