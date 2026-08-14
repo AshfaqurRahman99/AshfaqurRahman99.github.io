@@ -154,6 +154,75 @@
         html {
             scroll-behavior: smooth;
         }
+        /* -------------------------
+           HORIZONTAL PROJECT CARDS (Ultimate Fix)
+           ------------------------- */
+        /* Light Mode Outer Card */
+        .project-card {
+            background-color: #f1f5f9 !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        /* Dark Mode Outer Card */
+        body.dark-theme .project-card {
+            background-color: #18263a !important;
+            border: 1px solid #2a3f5a !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        /* 
+           THE FIX: This forces every single inner structural layer 
+           to be completely transparent, ignoring your other global themes.
+        */
+        .project-card .row,
+        .project-card [class*="col-"],
+        .project-card .card-body {
+            background-color: transparent !important;
+            --bs-card-bg: transparent !important;
+        }
+
+        /* Hover Effects */
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        body.dark-theme .project-card:hover {
+            box-shadow: 0 10px 20px sandybrown !important;
+            /* box-shadow: 0 12px 24px rgba(197, 13, 13, 0.4) !important; */
+        }
+        /* Square Image Enforcement */
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            /* Forces the perfect square */
+        }
+
+        /* On mobile, stack it and make it a 16:9 rectangle so it looks better */
+        @media (max-width: 767px) {
+            .project-img {
+                aspect-ratio: 16 / 9;
+            }
+        }
+
+        /* Tech Stack Badges */
+        .project-badge {
+            background-color: #fdfefe;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+        }
+
+        body.dark-theme .project-badge {
+            background-color: #334155;
+            color: #cbd5e1;
+            border-color: #475569;
+        }
 
         /* -------------------------
            DYNAMIC COURSE ICONS
