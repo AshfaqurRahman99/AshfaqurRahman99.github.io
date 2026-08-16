@@ -5,20 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Activism | Ashfaqur Rahman</title>
-     <link rel="icon" type="image/svg+xml" href="faviconAR.svg">
-    
     <!-- Premium Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Dark and Light Mode icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* -------------------------
+           SMOOTH SCROLL & OFFSET
+           ------------------------- */
         html {
-            font-size: 80%;
+            font-size: 85%;
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent fixed header from hiding the scrolled section */
+        .social-detail-section {
+            scroll-margin-top: 100px;
+            /* Adjusts the landing position slightly below the header */
         }
 
         body {
@@ -80,6 +93,139 @@
             color: #2563eb;
         }
 
+        /* -------------------------
+           DYNAMIC SOCIAL IMPACT BADGES (Clean & Interactive)
+           ------------------------- */
+        /* 1. The Continuous Floating Animation */
+        @keyframes organicFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* 2. Base Style (Light Mode) */
+        .impact-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 18px;
+            /* Reduced padding to make the bubbles less bulky */
+            border-radius: 50px;
+
+            /* Background, Border & Shadow */
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 68, 170, 0.6);
+            box-shadow: 0 4px 12px rgba(0, 68, 170, 0.08);
+
+            /* TEXT STYLES (Smaller, Bolder, Spaced) */
+            color: #475569;
+            font-weight: 700;
+            /* Bolder text */
+            font-size: 0.85rem;
+            /* Smaller text */
+            letter-spacing: 0.3px;
+            /* Gives the text some breathing room */
+
+            margin: 8px 6px;
+            /* Adjusted margin to fit better */
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            animation: organicFloat 3.5s ease-in-out infinite;
+        }
+
+        /* Automatically adjust the icon sizes to match the smaller text */
+        .impact-badge i {
+            font-size: 0.95rem !important;
+        }
+
+        /* 3. Stagger the animations */
+        .impact-badge:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .impact-badge:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        .impact-badge:nth-child(3) {
+            animation-delay: 1.4s;
+        }
+
+        .impact-badge:nth-child(4) {
+            animation-delay: 2.1s;
+        }
+
+        .impact-badge:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .impact-badge:nth-child(6) {
+            animation-delay: 1.1s;
+        }
+
+        .impact-badge:nth-child(7) {
+            animation-delay: 1.8s;
+        }
+
+        .impact-badge:nth-child(8) {
+            animation-delay: 2.5s;
+        }
+
+        /* 4. Hover Effect (Light Mode) */
+        .impact-badge:hover {
+            color: #0044aa;
+            /* Text turns deep blue on hover */
+            border-color: #0044aa;
+            box-shadow: 0 6px 18px rgba(0, 68, 170, 0.2);
+            /* Shadow gets slightly stronger */
+        }
+
+        /* 5. Base Style (Dark Mode) */
+        body.dark-theme .impact-badge {
+            background-color: rgba(255, 255, 0, 0.02);
+            border: 1px solid rgba(255, 255, 0, 0.5);
+            /* Softened yellow border */
+            box-shadow: 0 4px 12px rgba(255, 255, 0, 0.08);
+
+            /* NORMAL TEXT COLOR */
+            color: #cbd5e1;
+            /* Professional light slate text */
+        }
+
+        /* 6. Hover Effect (Dark Mode) */
+        body.dark-theme .impact-badge:hover {
+            color: #FFFF00;
+            /* Text turns bright yellow on hover */
+            border-color: #FFFF00;
+            background-color: rgba(255, 255, 0, 0.06);
+            box-shadow: 0 6px 18px rgba(255, 255, 0, 0.2);
+        }
+
+        /* -------------------------
+           BRIGHT HEADING
+           ------------------------- */
+        .bright-heading {
+            color: #0044aa !important;
+            /* Deep Blue for Light Mode */
+            text-shadow: 0 2px 8px rgba(0, 68, 170, 0.15);
+            /* Soft glow */
+        }
+
+        body.dark-theme .bright-heading {
+            color: #FFFF00 !important;
+            /* Bright Yellow for Dark Mode */
+            text-shadow: 0 2px 10px rgba(255, 255, 0, 0.2);
+            /* Soft yellow glow */
+        }
+
+        /* End of Key contributions Tag */
+
         /* Gallery Image Styling */
         .carousel-inner {
             border-radius: 8px;
@@ -88,28 +234,16 @@
 
         .carousel-item img {
             width: 100%;
-            height: 100%;
+            height: 250px;
             /* Locks the height so the page doesn't jump around */
             object-fit: cover;
             /* Ensures portrait and landscape photos look good without stretching */
-        }
-        /* -------------------------
-           CAROUSEL IMAGE 16:9 LOCK
-           ------------------------- */
-        .carousel-inner img {
-            width: 100% !important;
-            /* Forces image to fill the width of the box */
-            aspect-ratio: 16 / 9 !important;
-            /* Locks the mathematical ratio forever */
-            object-fit: cover !important;
-            /* Prevents the image from squishing */
-            display: block;
         }
 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             .carousel-item img {
-                height: 100%;
+                height: 250px;
             }
 
             .content-box {
@@ -139,6 +273,7 @@
             color: #eff6ff;
             text-decoration: underline;
         }
+
         /* -------------------------
            MASTER DARK MODE FIX (For Sub-Pages)
            ------------------------- */
@@ -228,27 +363,112 @@
             </div>
         </div>
 
+        <!-- DYNAMIC SOCIAL IMPACT AREA -->
+        <div class="text-center mb-5 mt-4">
+            <h4 class="mb-4 bright-heading" style="font-size: 1.15rem; font-weight: 700;">
+                <i class="fa-solid fa-bullseye me-2"></i>Key Areas of Contribution
+            </h4>
+
+            <!-- Flex container to center the floating badges -->
+            <div class="d-flex flex-wrap justify-content-center">
+
+                <!-- Badge 1 -->
+                <a href="#community-welfare" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-hand-holding-heart me-2" style="font-size: 1.1rem; color: #ef4444;"></i>
+                    Community Welfare & Relief
+                </a>
+
+                <!-- Badge 2 -->
+                <a href="#youth-leadership" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-users-rays me-2" style="font-size: 1.1rem; color: #8b5cf6;"></i>
+                    Youth Leadership & Empowerment
+                </a>
+
+                <!-- Badge 3 -->
+                <!-- <a href="#stem-digital" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-laptop-code me-2" style="font-size: 1.1rem; color: #0ea5e9;"></i>
+                    STEM & Digital Literacy
+                </a> -->
+                <!-- Badge 3 -->
+                <a href="#easy-access-education" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-book-open-reader me-2" style="font-size: 1.1rem; color: #fd7e14;"></i>
+                    Easy Access to Education
+                </a>
+
+                <!-- Badge 4 -->
+                <a href="#sustainable-green" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-leaf me-2" style="font-size: 1.1rem; color: #10b981;"></i>
+                    Sustainable & Green Initiatives
+                </a>
+
+                <!-- Badge 5 -->
+                <a href="#human-rights" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-scale-balanced me-2" style="font-size: 1.1rem; color: #f59e0b;"></i>
+                    Human Rights & Equality
+                </a>
+
+                <!-- Badge 6 -->
+                <!-- <a href="#entrepreneurship" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-briefcase me-2" style="font-size: 1.1rem; color: #3b82f6;"></i>
+                    Entrepreneurship & Job Creation
+                </a> -->
+
+                <!-- Badge 7 -->
+                <a href="#women-empowerment" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-person-dress me-2" style="font-size: 1.1rem; color: #ec4899;"></i>
+                    Women Empowerment
+                </a>
+
+                <!-- Badge 8 -->
+                <!-- <a href="#public-awareness" class="impact-badge text-decoration-none">
+                    <i class="fa-solid fa-bullhorn me-2" style="font-size: 1.1rem; color: #14b8a6;"></i>
+                    Public Awareness & Advocacy
+                </a> -->
+
+            </div>
+        </div>
+
+
+        <!-- Badge 4 -->
+        <!-- <div class="impact-badge">
+                    <i class="fa-solid fa-leaf me-2" style="font-size: 1.1rem; color: #28a745;"></i>
+                    Environment Protection
+                </div> -->
+
+
+
         <!-- Two-Column Dynamic Grid -->
         <div class="row g-4">
+            <!-- DETAIL SECTION: Women Empowerment -->
+            <!-- The ID here must exactly match the href in the badge (without the #) -->
+            <div id="women-empowerment" class="social-detail-section mt-5 pt-4">
+                <h3 class="fw-bold mb-3" style="color: #0044aa;">
+                    <i class="fa-solid fa-person-dress me-2"></i>Women Empowerment
+                </h3>
+                <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                    Here you can write about your initiatives, seminars, or activities related to Women Empowerment...
+                    (আপনার কাজের বিস্তারিত এখানে থাকবে)
+                </p>
+            </div>
 
             <!-- ACTIVITY 1:  -->
             <div class="col-lg-6 col-md-12">
                 <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
                 <div class="content-box h-100 mb-0 d-flex flex-column">
-                    <div class="role-title">Vice President</div>
-                    <div class="org-meta">ABOHO (KUET Environmental Club)</div>
+                    <div class="role-title">Tailoring Training & Sewing Machine Distribution</div>
+                    <!-- <div class="org-meta">arranged by PATH Bangladesh</div> -->
                     <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
-                    <p class="flex-grow-1">As Vice President, I led environmental awareness campaigns and organized
-                        campus-wide sustainability initiatives to promote green practices and ecological responsibility
-                        among the student body.</p>
+                    <p class="flex-grow-1">Driving financial independence for marginalized women through structured
+                        tailoring training and distributing sewing machines to top participants to kickstart their
+                        entrepreneurial journeys.</p>
 
                     <!-- Sliding Gallery for ABOHO -->
                     <div id="carousel-1" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Gallery/1/1.jpg" alt="ABOHO Event Photo 1">
+                                <img src="Gallery/Social/WomenEmp/WomenEmp1.png" alt="Tailoring Training Event Photo 1">
                             </div>
-                            <div class="carousel-item">
+                            <!-- <div class="carousel-item">
                                 <img src="Gallery/1/2.jpg" alt="ABOHO Event Photo 2">
                             </div>
                             <div class="carousel-item">
@@ -259,7 +479,7 @@
                             </div>
                             <div class="carousel-item">
                                 <img src="Gallery/1/5.jpg" alt="ABOHO Event Photo 5">
-                            </div>
+                            </div> -->
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
                             data-bs-slide="prev">
@@ -279,16 +499,16 @@
             </div>
 
             <!-- ACTIVITY 2:  -->
-            <div class="col-lg-6 col-md-12">
+            <!-- <div class="col-lg-6 col-md-12">
                 <div class="content-box h-100 mb-0 d-flex flex-column">
                     <div class="role-title">Active Member</div>
                     <div class="org-meta">Try (Social Welfare Organization)</div>
                     <p class="flex-grow-1">Contributed to local community support efforts, organizing donation drives
                         and engaging in direct social welfare projects designed to assist vulnerable populations in the
-                        Khulna region.</p>
+                        Khulna region.</p> -->
 
-                    <!-- Sliding Gallery for Try -->
-                    <div id="carousel-2" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+            <!-- Sliding Gallery for Try -->
+            <!-- <div id="carousel-2" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="Gallery/2/1.jpg" alt="Try Organization Photo 1">
@@ -309,6 +529,66 @@
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carousel-2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div> -->
+            <!-- Generic Counter (No ID needed, just the class!) -->
+            <!-- <div class="carousel-counter text-center mt-2 text-muted"
+                        style="font-size: 0.85rem; font-weight: 600;"></div>
+                </div>
+            </div> -->
+
+            <!-- DETAIL SECTION: Easy Access to Education -->
+            <!-- The ID here must exactly match the href in the badge (without the #) -->
+            <div id="easy-access-education" class="social-detail-section mt-5 pt-4">
+                <h3 class="fw-bold mb-3" style="color: #0044aa;">
+                    <i class="fa-solid fa-book-open-reader me-2"></i>Easy Access to Education
+                </h3>
+                <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                    Here you can write about your initiatives, seminars, or activities related to Easy Access to
+                    Education...
+                    (আপনার কাজের বিস্তারিত এখানে থাকবে)
+                </p>
+            </div>
+
+            <!-- ACTIVITY 1:  -->
+            <div class="col-lg-6 col-md-12">
+                <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
+                <div class="content-box h-100 mb-0 d-flex flex-column">
+                    <div class="role-title">Merit-Based Educational Scholarship Program</div>
+                    <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
+                    <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
+                    <p class="flex-grow-1">Providing educational scholarships to underprivileged, meritorious students
+                        based on their talent and financial need, ensuring that economic constraints do not hinder their
+                        academic journeys.</p>
+
+                    <!-- Sliding Gallery for Scholarship Program -->
+                    <div id="carousel-1" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Gallery/1/1.jpg" alt="Scholarship Program Event Photo 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/2.jpg" alt="Scholarship Program Event Photo 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/3.jpg" alt="Scholarship Program Event Photo 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/4.jpg" alt="Scholarship Program Event Photo 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/5.jpg" alt="Scholarship Program Event Photo 5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-1"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -360,6 +640,175 @@
                         style="font-size: 0.85rem; font-weight: 600;"></div>
                 </div>
             </div>
+
+            <!-- DETAIL SECTION: Human Rights & Equality -->
+            <!-- The ID here must exactly match the href in the badge (without the #) -->
+            <div id="human-rights" class="social-detail-section mt-5 pt-4">
+                <h3 class="fw-bold mb-3" style="color: #0044aa;">
+                    <i class="fa-solid fa-hand-holding-heart me-2"></i>Human Rights & Equality
+                </h3>
+                <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                    Here you can write about your initiatives, seminars, or activities related to Human Rights &
+                    Equality...
+                    (আপনার কাজের বিস্তারিত এখানে থাকবে)
+                </p>
+            </div>
+
+            <!-- ACTIVITY 1:  -->
+            <div class="col-lg-6 col-md-12">
+                <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
+                <div class="content-box h-100 mb-0 d-flex flex-column">
+                    <div class="role-title">2024 Emergency Flood Relief Mission</div>
+                    <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
+                    <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
+                    <p class="flex-grow-1">Executing rapid relief missions by delivering essential supplies and daily
+                        necessities to flood-affected communities across multiple districts during the 2024 national
+                        crisis.</p>
+
+                    <!-- Sliding Gallery for Scholarship Program -->
+                    <div id="carousel-1" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Gallery/1/1.jpg" alt="Scholarship Program Event Photo 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/2.jpg" alt="Scholarship Program Event Photo 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/3.jpg" alt="Scholarship Program Event Photo 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/4.jpg" alt="Scholarship Program Event Photo 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/5.jpg" alt="Scholarship Program Event Photo 5">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- Generic Counter (No ID needed, just the class!) -->
+                    <div class="carousel-counter text-center mt-2 text-muted"
+                        style="font-size: 0.85rem; font-weight: 600;"></div>
+                </div>
+            </div>
+
+
+            <!-- DETAIL SECTION: Community Welfare & Relief -->
+            <!-- The ID here must exactly match the href in the badge (without the #) -->
+            <div id="community-welfare" class="social-detail-section mt-5 pt-4">
+                <h3 class="fw-bold mb-3" style="color: #0044aa;">
+                    <i class="fa-solid fa-hand-holding-heart me-2"></i>Community Welfare & Relief
+                </h3>
+                <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                    Here you can write about your initiatives, seminars, or activities related to Community Welfare &
+                    Relief...
+                    (আপনার কাজের বিস্তারিত এখানে থাকবে)
+                </p>
+            </div>
+
+            <!-- ACTIVITY 1: -->
+            <div class="col-lg-6 col-md-12">
+                <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
+                <div class="content-box h-100 mb-0 d-flex flex-column">
+                    <div class="role-title">Joy Sharing Events for Special Children</div>
+                    <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
+                    <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
+                    <p class="flex-grow-1">Organizing engaging social events and gift distributions for special
+                        children, ensuring they feel valued, included, and can share the joy of mainstream community
+                        celebrations.</p>
+
+                    <!-- Sliding Gallery for Joy Sharing Events -->
+                    <div id="carousel-3" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Gallery/3/1.jpg" alt="Joy Sharing Event Photo 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/3/2.jpg" alt="Joy Sharing Event Photo 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/3/3.jpg" alt="Joy Sharing Event Photo 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- Generic Counter (No ID needed, just the class!) -->
+                    <div class="carousel-counter text-center mt-2 text-muted"
+                        style="font-size: 0.85rem; font-weight: 600;"></div>
+                </div>
+            </div>
+
+            <!-- DETAIL SECTION: Youth Leadership & Empowerment -->
+            <!-- The ID here must exactly match the href in the badge (without the #) -->
+            <div id="youth-leadership" class="social-detail-section mt-5 pt-4">
+                <h3 class="fw-bold mb-3" style="color: #0044aa;">
+                    <i class="fa-solid fa-users-rays me-2"></i>Youth Leadership & Empowerment
+                </h3>
+                <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+                    Here you can write about your initiatives, seminars, or activities related to Youth Leadership &
+                    Empowerment...
+                    (আপনার কাজের বিস্তারিত এখানে থাকবে)
+                </p>
+            </div>
+
+            <!-- ACTIVITY 1: -->
+            <div class="col-lg-6 col-md-12">
+                <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
+                <div class="content-box h-100 mb-0 d-flex flex-column">
+                    <div class="role-title">Youth Journalism Training & Certification</div>
+                    <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
+                    <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
+                    <p class="flex-grow-1">Facilitating skill-building programs and practical journalism training to
+                        equip the youth with practical knowledge and empower them as future community leaders.</p>
+
+                    <!-- Sliding Gallery for ABOHO -->
+                    <div id="carousel-3" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Gallery/3/1.jpg" alt="Youth Journalism Event Photo 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/3/2.jpg" alt="Youth Journalism Event Photo 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/3/3.jpg" alt="Youth Journalism Event Photo 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- Generic Counter (No ID needed, just the class!) -->
+                    <div class="carousel-counter text-center mt-2 text-muted"
+                        style="font-size: 0.85rem; font-weight: 600;"></div>
+                </div>
+            </div>
+        </div>
 
         </div>
         <!-- FOOTER -->
