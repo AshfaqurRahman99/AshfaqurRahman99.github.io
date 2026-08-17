@@ -228,18 +228,39 @@
 
         /* End of Key contributions Tag */
 
-        /* Gallery Image Styling */
+        /* Gallery Styling */
         .carousel-inner {
             border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
         }
 
         .carousel-item img {
             width: 100%;
-            height: 250px;
-            /* Locks the height so the page doesn't jump around */
+            height: 100%;
             object-fit: cover;
-            /* Ensures portrait and landscape photos look good without stretching */
+        }
+        /* -------------------------
+           CAROUSEL IMAGE 16:9 LOCK
+           ------------------------- */
+        .carousel-inner img {
+            width: 100% !important;
+            /* Forces image to fill the width of the box */
+            aspect-ratio: 16 / 9 !important;
+            /* Locks the mathematical ratio forever */
+            object-fit: cover !important;
+            /* Prevents the image from squishing */
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 100%;
+            }
+
+            .content-box {
+                padding: 25px 20px;
+            }
         }
 
         /* Mobile Adjustments */
