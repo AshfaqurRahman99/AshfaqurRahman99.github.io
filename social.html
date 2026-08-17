@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Last carousel Id: 7-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Activism | Ashfaqur Rahman</title>
     <link rel="icon" type="image/svg+xml" href="faviconAR.svg">
-    
+
     <!-- Premium Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -240,6 +242,7 @@
             height: 100%;
             object-fit: cover;
         }
+
         /* -------------------------
            CAROUSEL IMAGE 16:9 LOCK
            ------------------------- */
@@ -260,17 +263,6 @@
 
             .content-box {
                 padding: 25px 20px;
-            }
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .carousel-item img {
-                height: 250px;
-            }
-
-            .content-box {
-                padding: 25px;
             }
         }
 
@@ -462,6 +454,7 @@
 
         <!-- Two-Column Dynamic Grid -->
         <div class="row g-4">
+
             <!-- DETAIL SECTION: Women Empowerment -->
             <!-- The ID here must exactly match the href in the badge (without the #) -->
             <div id="women-empowerment" class="social-detail-section mt-5 pt-4">
@@ -474,42 +467,7 @@
                 </p>
             </div>
 
-            <!-- Social Activity 1: Tailoring Training & Sewing Machine Distribution -->
-                <div class="col-lg-6 col-md-12">
-                    <div id="social-1" class="content-box h-100 d-flex flex-column">
-                        <div class="role-title">Tailoring Training & Sewing Machine Distribution</div>
-                        <!-- <div class="org-meta">Ghorar Gari (Hansom) Brand</div> -->
-
-                        <p class="flex-grow-1">Driving financial independence for marginalized women through structured
-                        tailoring training and distributing sewing machines to top participants to kickstart their
-                        entrepreneurial journeys.</p>
-
-                        <!-- Universal Gallery for Leadership 5 -->
-                        <div id="carousel-l5" class="carousel slide mt-auto w-100" data-bs-ride="carousel">
-                            <div class="carousel-item active">
-                                <img src="Gallery/3/1.jpg" alt="Youth Journalism Event Photo 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Gallery/3/2.jpg" alt="Youth Journalism Event Photo 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Gallery/3/3.jpg" alt="Youth Journalism Event Photo 3">
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-l5"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-l5"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
-                        </div>
-                        <div class="carousel-counter text-center mt-2 text-muted"
-                            style="font-size: 0.85rem; font-weight: 600;"></div>
-                    </div>
-                </div>
-
-            <!-- ACTIVITY 1:  -->
+            <!-- Women Empowerment ACTIVITY 1: Tailoring Training -->
             <div class="col-lg-6 col-md-12">
                 <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
                 <div class="content-box h-100 mb-0 d-flex flex-column">
@@ -520,11 +478,16 @@
                         tailoring training and distributing sewing machines to top participants to kickstart their
                         entrepreneurial journeys.</p>
 
-                    <!-- Sliding Gallery for ABOHO -->
+                    <!-- Sliding Gallery for Tailoring Training -->
                     <div id="carousel-1" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Gallery/Social/WomenEmp/WomenEmp1.png" alt="Tailoring Training Event Photo 1">
+                                <img src="Gallery/Social/Women_Empowerment/WomenEmp1.png"
+                                    alt="Tailoring Training Event Photo 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/Social/Women_Empowerment/WomenEmp1.png"
+                                    alt="Tailoring Training Event Photo 1">
                             </div>
                             <!-- <div class="carousel-item">
                                 <img src="Gallery/1/2.jpg" alt="ABOHO Event Photo 2">
@@ -556,31 +519,41 @@
                 </div>
             </div>
 
-            <!-- ACTIVITY 2:  -->
-            <!-- <div class="col-lg-6 col-md-12">
-                <div class="content-box h-100 mb-0 d-flex flex-column">
-                    <div class="role-title">Active Member</div>
-                    <div class="org-meta">Try (Social Welfare Organization)</div>
-                    <p class="flex-grow-1">Contributed to local community support efforts, organizing donation drives
-                        and engaging in direct social welfare projects designed to assist vulnerable populations in the
-                        Khulna region.</p> -->
+            <!-- Women Empowerment ACTIVITY 2:  -->
+            <!-- <div class="col-lg-6 col-md-12"> -->
+            <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
+            <!-- <div class="content-box h-100 mb-0 d-flex flex-column">
+                    <div class="role-title">Tailoring Training & Sewing Machine Distribution</div> -->
+            <!-- <div class="org-meta">arranged by PATH Bangladesh</div> -->
+            <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
+            <!-- <p class="flex-grow-1">Driving financial independence for marginalized women through structured
+                        tailoring training and distributing sewing machines to top participants to kickstart their
+                        entrepreneurial journeys.</p> -->
 
-            <!-- Sliding Gallery for Try -->
+            <!-- Sliding Gallery for Activity 2 of Women Empowerment -->
             <!-- <div id="carousel-2" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Gallery/2/1.jpg" alt="Try Organization Photo 1">
+                                <img src="Gallery/Social/Women_Empowerment/WomenEmp1.png"
+                                    alt="Tailoring Training Event Photo 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="Gallery/2/2.jpg" alt="Try Organization Photo 2">
+                                <img src="Gallery/Social/Women_Empowerment/WomenEmp1.png"
+                                    alt="Tailoring Training Event Photo 1">
+                            </div> -->
+            <!-- <div class="carousel-item">
+                                <img src="Gallery/1/2.jpg" alt="ABOHO Event Photo 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="Gallery/2/3.jpg" alt="Try Organization Photo 3">
+                                <img src="Gallery/1/3.jpg" alt="ABOHO Event Photo 3">
                             </div>
                             <div class="carousel-item">
-                                <img src="Gallery/2/4.jpg" alt="Try Organization Photo 4">
+                                <img src="Gallery/1/4.jpg" alt="ABOHO Event Photo 4">
                             </div>
-                        </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/1/5.jpg" alt="ABOHO Event Photo 5">
+                            </div> -->
+            <!-- </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-2"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -597,6 +570,8 @@
                         style="font-size: 0.85rem; font-weight: 600;"></div>
                 </div>
             </div> -->
+
+
 
             <!-- DETAIL SECTION: Easy Access to Education -->
             <!-- The ID here must exactly match the href in the badge (without the #) -->
@@ -618,12 +593,14 @@
                     <div class="role-title">Merit-Based Educational Scholarship Program</div>
                     <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
                     <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
-                    <p class="flex-grow-1">Providing educational scholarships to underprivileged, meritorious students
-                        based on their talent and financial need, ensuring that economic constraints do not hinder their
+                    <p class="flex-grow-1">Providing educational scholarships to underprivileged, meritorious
+                        students
+                        based on their talent and financial need, ensuring that economic constraints do not
+                        hinder their
                         academic journeys.</p>
 
                     <!-- Sliding Gallery for Scholarship Program -->
-                    <div id="carousel-1" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                    <div id="carousel-3" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="Gallery/1/1.jpg" alt="Scholarship Program Event Photo 1">
@@ -639,47 +616,6 @@
                             </div>
                             <div class="carousel-item">
                                 <img src="Gallery/1/5.jpg" alt="Scholarship Program Event Photo 5">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-1"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <!-- Generic Counter (No ID needed, just the class!) -->
-                    <div class="carousel-counter text-center mt-2 text-muted"
-                        style="font-size: 0.85rem; font-weight: 600;"></div>
-                </div>
-            </div>
-
-            <!-- ACTIVITY 3: -->
-            <div class="col-lg-6 col-md-12">
-                <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
-                <div class="content-box h-100 mb-0 d-flex flex-column">
-                    <div class="role-title">Vice President</div>
-                    <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
-                    <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
-                    <p class="flex-grow-1">As Vice President, I led environmental awareness campaigns and organized
-                        campus-wide sustainability initiatives to promote green practices and ecological responsibility
-                        among the student body.</p>
-
-                    <!-- Sliding Gallery for ABOHO -->
-                    <div id="carousel-3" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="Gallery/3/1.jpg" alt="ABOHO Event Photo 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Gallery/3/2.jpg" alt="ABOHO Event Photo 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Gallery/3/3.jpg" alt="ABOHO Event Photo 3">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"
@@ -699,6 +635,49 @@
                 </div>
             </div>
 
+            <!-- ACTIVITY 3: -->
+            <div class="col-lg-6 col-md-12">
+                <!-- Notice the 'h-100 d-flex flex-column' classes to perfectly align the boxes -->
+                <div class="content-box h-100 mb-0 d-flex flex-column">
+                    <div class="role-title">Vice President</div>
+                    <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
+                    <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
+                    <p class="flex-grow-1">As Vice President, I led environmental awareness campaigns and
+                        organized
+                        campus-wide sustainability initiatives to promote green practices and ecological
+                        responsibility
+                        among the student body.</p>
+
+                    <!-- Sliding Gallery for ABOHO -->
+                    <div id="carousel-4" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Gallery/3/1.jpg" alt="ABOHO Event Photo 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/3/2.jpg" alt="ABOHO Event Photo 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/3/3.jpg" alt="ABOHO Event Photo 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- Generic Counter (No ID needed, just the class!) -->
+                    <div class="carousel-counter text-center mt-2 text-muted"
+                        style="font-size: 0.85rem; font-weight: 600;"></div>
+                </div>
+            </div>
+
             <!-- DETAIL SECTION: Community Welfare & Relief -->
             <!-- The ID here must exactly match the href in the badge (without the #) -->
             <div id="community-welfare" class="social-detail-section mt-5 pt-4">
@@ -706,7 +685,8 @@
                     <i class="fa-solid fa-hand-holding-heart me-2"></i>Community Welfare & Relief
                 </h3>
                 <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
-                    Here you can write about your initiatives, seminars, or activities related to Community Welfare &
+                    Here you can write about your initiatives, seminars, or activities related to Community
+                    Welfare &
                     Relief...
                     (আপনার কাজের বিস্তারিত এখানে থাকবে)
                 </p>
@@ -719,20 +699,23 @@
                     <div class="role-title">2024 Emergency Flood Relief Mission</div>
                     <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
                     <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
-                    <p class="flex-grow-1">Executing rapid relief missions by delivering essential supplies and daily
-                        necessities to flood-affected communities across multiple districts during the 2024 national
+                    <p class="flex-grow-1">Executing rapid relief missions by delivering essential supplies and
+                        daily
+                        necessities to flood-affected communities across multiple districts during the 2024
+                        national
                         crisis.</p>
 
                     <!-- Sliding Gallery for Scholarship Program -->
-                    <div id="carousel-1" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                    <div id="carousel-5" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item">
-                                <img src="Gallery/Social/Community_welfare/Flood2.png"
-                                    alt="Flood Relief Event Photo 2">
+                            <div class="carousel-item active">
+                                <img src="Gallery/Social/Community_welfare/Flood1.png" alt="Flood Relief Event Photo 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="Gallery/Social/Community_welfare/Flood3.png"
-                                    alt="Flood Relief Event Photo 3">
+                                <img src="Gallery/Social/Community_welfare/Flood2.png" alt="Flood Relief Event Photo 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Gallery/Social/Community_welfare/Flood3.png" alt="Flood Relief Event Photo 3">
                             </div>
                             <!-- <div class="carousel-item">
                                 <img src="Gallery/Social/Community_welfare/Flood4.png.jpg" alt="Scholarship Program Event Photo 4">
@@ -741,12 +724,12 @@
                                 <img src="Gallery/Social/Community_welfare/Flood5.png.jpg" alt="Scholarship Program Event Photo 5">
                             </div> -->
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-1"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-5"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-1"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-5"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -780,11 +763,12 @@
                     <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
                     <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
                     <p class="flex-grow-1">Organizing engaging social events and gift distributions for special
-                        children, ensuring they feel valued, included, and can share the joy of mainstream community
+                        children, ensuring they feel valued, included, and can share the joy of mainstream
+                        community
                         celebrations.</p>
 
                     <!-- Sliding Gallery for Joy Sharing Events -->
-                    <div id="carousel-3" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                    <div id="carousel-6" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="Gallery/Social/Inclusive_Society/joyShare1.png"
@@ -799,12 +783,12 @@
                                     alt="Joy Sharing Event Photo 3">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-6"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-3"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-6"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -823,7 +807,8 @@
                     <i class="fa-solid fa-users-rays me-2"></i>Youth Leadership & Empowerment
                 </h3>
                 <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
-                    Here you can write about your initiatives, seminars, or activities related to Youth Leadership &
+                    Here you can write about your initiatives, seminars, or activities related to Youth
+                    Leadership &
                     Empowerment...
                     (আপনার কাজের বিস্তারিত এখানে থাকবে)
                 </p>
@@ -836,11 +821,13 @@
                     <div class="role-title">Youth Journalism Training & Certification</div>
                     <!-- <div class="org-meta">ABOHO (KUET Environmental Club)</div> -->
                     <!-- flex-grow-1 pushes the image gallery to the bottom perfectly -->
-                    <p class="flex-grow-1">Facilitating skill-building programs and practical journalism training to
-                        equip the youth with practical knowledge and empower them as future community leaders.</p>
+                    <p class="flex-grow-1">Facilitating skill-building programs and practical journalism
+                        training to
+                        equip the youth with practical knowledge and empower them as future community leaders.
+                    </p>
 
-                    <!-- Sliding Gallery for Youth leadership and empowerment -->
-                    <div id="carousel-3" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
+                    <!-- Sliding Gallery for ABOHO -->
+                    <div id="carousel-7" class="carousel slide mt-4 w-100" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="Gallery/3/1.jpg" alt="Youth Journalism Event Photo 1">
@@ -852,12 +839,12 @@
                                 <img src="Gallery/3/3.jpg" alt="Youth Journalism Event Photo 3">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-3"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-7"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-3"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-7"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -869,6 +856,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- FOOTER -->
         <div class="custom-footer dark-footer">
             Site last updated: <span id="last-updated-date"></span> &bull;
