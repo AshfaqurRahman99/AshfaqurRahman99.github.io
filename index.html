@@ -740,6 +740,54 @@
             /* Subtle yellow glow background */
             /* border: 1px solid rgba(255, 255, 0, 0.3); */
         }
+        /* -------------------------
+           SKILL PILLS (Logos + Text)
+           ------------------------- */
+        .skill-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            /* Space between logo and text */
+            padding: 6px 14px;
+            border-radius: 8px;
+            /* Slightly rounded modern look */
+            background-color: #f1f5f9;
+            /* Light mode background */
+            border: 1px solid #e2e8f0;
+            color: #13181f;
+            font-size: 0.99rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        /* Dark Mode Colors */
+        body.dark-theme .skill-pill {
+            background-color: #1e293b;
+            border-color: #334155;
+            color: #cbd5e1;
+        }
+
+        /* Hover Effect (Slight lift and glow) */
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-color: #0044aa;
+            /* Deep blue hint in light mode */
+        }
+
+        body.dark-theme .skill-pill:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-color: #FFFF00;
+            /* Yellow hint in dark mode */
+        }
+
+        /* Logo Image Sizing */
+        .skill-pill img {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+            /* Prevents logos from stretching */
+        }
         
     </style>
 </head>
@@ -1215,7 +1263,34 @@
                         <div class="skill-category "><i class="fa-solid fa-file-powerpoint skill-icon"></i>
                             Documentation
                             & Presentation</div>
-                        <div class="skill-tools">Microsoft Office (Word, PowerPoint, Excel), LateX, Google Workspace</div>
+                        <!-- <div class="skill-tools">Microsoft Office (Word, PowerPoint, Excel), LateX, Google Workspace</div> -->
+                        <!-- Right Column -->
+                        <div class="col-md-7">
+                            <div class="d-flex flex-wrap gap-2">
+                                <!-- Microsoft Word -->
+                                <div class="skill-pill">
+                                    <img src="images/word-logo-removebg.png" alt="Microsoft Word">
+                                    Microsoft Word
+                                </div>
+                                <!-- Microsoft PowerPoint -->
+                                <div class="skill-pill">
+                                    <img src="images/powerpoint-logo.webp" alt="Microsoft PowerPoint">
+                                    Microsoft PowerPoint
+                                </div>
+
+                                <!-- Microsoft Excel -->
+                                <div class="skill-pill">
+                                    <img src="images/excel-logo.webp" alt="Microsoft Excel">
+                                    Microsoft Excel
+                                </div>
+
+                                <!-- Microsoft Power BI -->
+                                <div class="skill-pill">
+                                    <img src="images/power-bi-logo.png" alt="Microsoft Power BI">
+                                    Microsoft Power BI
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Skill 5 -->
